@@ -1,5 +1,5 @@
 # Django-Nginx-Gunicorn
-Deploy
+# Deploy
 Instalación de dependencias
 
 sudo apt update
@@ -36,25 +36,26 @@ GRANT ALL PRIVILEGES ON DATABASE <db_schema> TO <db_user>;
 \q
 
 
-Preparación del proyecto
+# Preparación del proyecto
 
 Debemos asegurarnos que en nuestro fichero settings.py:
 
 La ip de nuestro servidor (<server_ip>), o dominio, esté definida en ALLOWED_HOSTS.
 La configuración de nuestra base de datos esté correctamente plasmada en DATABASES.
 Existe la constante STATIC_ROOT y tiene definida la ruta para los estáticos.
+
 Aplicamos las migraciones:
 
-python manage.py migrate
-python manage.py collectstatic
-django-admin compilemessages --locale=es
+    python manage.py migrate
+    python manage.py collectstatic
+    django-admin compilemessages --locale=es
 
-Creación del servicio de Gunicorn
+#Creación del servicio de Gunicorn
 Creamos el fichero /etc/systemd/system/gunicorn.service y le añadimos el siguiente contenido:
 
 sudo vim /etc/systemd/system/gunicorn.service
 
-# nano
+
 [Unit]
 Description=gunicorn daemon
 After=network.target
@@ -74,9 +75,9 @@ sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 sudo systemctl status gunicorn
 
-  Creación del fichero de configuración de Nginx
+  # Creación del fichero de configuración de Nginx
 sudo vim /etc/nginx/sites-available/gunicorn 
-  # nano
+
 server {
     listen 80;
     server_name <server_ip>; 
