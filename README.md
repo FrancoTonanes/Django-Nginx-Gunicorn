@@ -119,7 +119,7 @@ Y escribimos:
         EMAIL_HOST_USER = 'adriantonanes@gmail.com'
         EMAIL_HOST_PASSWORD = '666franco'
 # Views.py
-    from django.core.mail import EmailMessage
+    	from django.core.mail import EmailMessage
     	if request.method == 'POST':
 		msg = EmailMessage(request.POST['asunto'],
 					   "\nConsulta: "+ request.POST['mensaje'] + "\n\n\nRemitente: "+ request.POST['nombre'] + "\nTelefono: "+ request.POST['telefono'] + "\nCorreo: " +request.POST['correo'], to=['marquezletreros2@gmail.com'])
