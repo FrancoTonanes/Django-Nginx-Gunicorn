@@ -116,8 +116,8 @@ Y escribimos:
         EMAIL_USE_TLS = True
         EMAIL_HOST = 'smtp.gmail.com'
         EMAIL_PORT = 587
-        EMAIL_HOST_USER = 'adriantonanes@gmail.com'
-        EMAIL_HOST_PASSWORD = '666franco'
+        EMAIL_HOST_USER = 'correo'
+        EMAIL_HOST_PASSWORD = 'contraseña'
 # Views.py
     	from django.core.mail import EmailMessage
     	if request.method == 'POST':
