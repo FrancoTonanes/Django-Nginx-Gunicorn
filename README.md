@@ -125,3 +125,16 @@ Y escribimos:
 					   "\nConsulta: "+ request.POST['mensaje'] + "\n\n\nRemitente: "+ request.POST['nombre'] + "\nTelefono: "+ request.POST['telefono'] + "\nCorreo: " +request.POST['correo'], to=['marquezletreros2@gmail.com'])
 		msg.send()
 		return redirect('gracias')
+# O
+	from django.core.mail import EmailMessage
+
+	def send_email(request):
+	    msg = EmailMessage('Request Callback',
+			       'Here is the message.', to=['charl@byteorbit.com'])
+	    msg.send()
+	    return HttpResponseRedirect('/')
+# Además hay que deshabilitar el captcha
+
+La primera vez para que el servidor nuevo(nueva ip) se loguee y no sea rechazada la petición 
+
+	url = https://accounts.google.com/DisplayUnlockCaptcha
