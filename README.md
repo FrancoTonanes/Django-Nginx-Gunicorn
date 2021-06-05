@@ -109,3 +109,19 @@ Y escribimos:
         → nginx: configuration file /etc/nginx/nginx.conf test is successful
 
       sudo systemctl restart nginx
+
+# Envio de mails con django en el servidor
+
+# Settings.py
+        EMAIL_USE_TLS = True
+        EMAIL_HOST = 'smtp.gmail.com'
+        EMAIL_PORT = 587
+        EMAIL_HOST_USER = 'adriantonanes@gmail.com'
+        EMAIL_HOST_PASSWORD = '666franco'
+# Views.py
+    from django.core.mail import EmailMessage
+    	if request.method == 'POST':
+		msg = EmailMessage(request.POST['asunto'],
+					   "\nConsulta: "+ request.POST['mensaje'] + "\n\n\nRemitente: "+ request.POST['nombre'] + "\nTelefono: "+ request.POST['telefono'] + "\nCorreo: " +request.POST['correo'], to=['marquezletreros2@gmail.com'])
+		msg.send()
+		return redirect('gracias')
