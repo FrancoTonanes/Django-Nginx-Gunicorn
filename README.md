@@ -134,7 +134,8 @@ Y escribimos:
 	    msg.send()
 	    return HttpResponseRedirect('/')
 # Además hay que deshabilitar el captcha
-
-La primera vez para que el servidor nuevo(nueva ip) se loguee y no sea rechazada la petición 
+-Loguearse con la cuenta de gmail que servirá de host para el envío de mails y deshabilitar el captcha en el link
+-Sirve para que el servidor nuevo(nueva ip) se loguee y no sea rechazada la petición por goole
 
 	url = https://accounts.google.com/DisplayUnlockCaptcha
+-Una vez deshabilitado el chaptcha, proceder a enviar los correos desde la web
