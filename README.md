@@ -72,15 +72,15 @@ Y escribimos:
   
 ----------------------------------
   
-sudo systemctl start gunicorn
-sudo systemctl enable gunicorn
-sudo systemctl status gunicorn
+	sudo systemctl start gunicorn
+	sudo systemctl enable gunicorn
+	sudo systemctl status gunicorn
 
-En caso de actulizar el archivo
-sudo systemctl daemon-reload
-sudo systemctl start gunicorn
-sudo systemctl enable gunicorn
-sudo systemctl status gunicorn
+	En caso de actulizar el archivo
+	sudo systemctl daemon-reload
+	sudo systemctl start gunicorn
+	sudo systemctl enable gunicorn
+	sudo systemctl status gunicorn
 
   # Creación del fichero de configuración de Nginx
    sudo vim /etc/nginx/sites-available/gunicorn 
