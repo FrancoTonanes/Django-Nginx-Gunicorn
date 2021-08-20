@@ -108,7 +108,7 @@ Y escribimos:
     }
   
   
-  
+  -----------------------------------------------------------------------
   
 	   sudo ln -s /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled
 
