@@ -19,6 +19,7 @@ Asumimos que el proyecto a desplegar está publicado en un repositorio online.
     git clone <git_url_project>
     cd <project_name>
     virtualenv --python=/usr/bin/python3.7 <project_name>env
+    source <project_name>env/bin/activate
     pip install django gunicorn psycopg2
     pip install -r requirements.txt
 
