@@ -150,7 +150,9 @@ Y escribimos:
 -Sirve para que el servidor nuevo(nueva ip) se loguee y no sea rechazada la petición por goole
 
 	url = https://accounts.google.com/DisplayUnlockCaptcha
--Una vez deshabilitado el chaptcha, proceder a enviar los correos desde la web
+-Una vez deshabilitado el chaptcha, proceder a enviar los correos desde la web.
+
+
 
 #AÑADIR CIFRADO SSL A LA PÁGINA WEB
 
