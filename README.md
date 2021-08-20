@@ -154,7 +154,7 @@ Y escribimos:
 
 
 
-#AÑADIR CIFRADO SSL A LA PÁGINA WEB
+#Añadir cifrado ssl a la web
 
 	sudo snap install core
 
