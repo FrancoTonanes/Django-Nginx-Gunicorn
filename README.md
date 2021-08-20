@@ -72,12 +72,18 @@ Y escribimos:
   
 ----------------------------------
   
-    sudo systemctl start gunicorn
-    sudo systemctl enable gunicorn
-    sudo systemctl status gunicorn
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
+
+En caso de actulizar el archivo
+sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+sudo systemctl status gunicorn
 
   # Creación del fichero de configuración de Nginx
-    sudo vim /etc/nginx/sites-available/gunicorn 
+   sudo vim /etc/nginx/sites-available/gunicorn 
 
     server {
         listen 80;
@@ -104,12 +110,17 @@ Y escribimos:
   
   
   
-      sudo ln -s /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled
-      sudo nginx -t 
-        → nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-        → nginx: configuration file /etc/nginx/nginx.conf test is successful
-
-      sudo systemctl restart nginx
+   sudo ln -s /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled
+   
+   sudo nginx -t 
+      → nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+      → nginx: configuration file /etc/nginx/nginx.conf test is successful
+      
+   sudo systemctl restart nginx 
+   
+   en caso de necesitar una actualización del archivo)   
+   sudo ln -sf /etc/nginx/sites-available/gunicorn /etc/nginx/sites-enabled 
+   sudo systemctl restart nginx
 
 # Envio de mails con django en el servidor
 
