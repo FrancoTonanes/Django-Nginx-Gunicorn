@@ -151,3 +151,21 @@ Y escribimos:
 
 	url = https://accounts.google.com/DisplayUnlockCaptcha
 -Una vez deshabilitado el chaptcha, proceder a enviar los correos desde la web
+
+#AÑADIR CIFRADO SSL A LA PÁGINA WEB
+
+	sudo snap install core
+
+	sudo snap install --classic certbot
+	
+	sudo ln -s /snap/bin/certbot /usr/bin/certbot
+	
+	sudo certbot --nginx
+	
+	--------------------
+	Obtener certificado
+	sudo certbot certonly --nginx
+	
+	---------------------
+	*Test de autorenovación del certificado
+	sudo certbot renew --dry-run
