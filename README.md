@@ -20,7 +20,7 @@ Asumimos que el proyecto a desplegar está publicado en un repositorio online.
     cd <project_name>
     virtualenv --python=/usr/bin/python3.7 <project_name>env
     source <project_name>env/bin/activate
-    pip install django gunicorn psycopg2
+    pip install django gunicorn
     pip install -r requirements.txt
 
 # Preparación de la base de datos
