@@ -1,4 +1,4 @@
-# Django-Nginx-Gunicorn
+# Django-Nginx-Gunicorn-Ubuntu
 # Deploy
 Instalación de dependencias
 
